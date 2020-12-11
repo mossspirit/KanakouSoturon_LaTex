@@ -170,5 +170,6 @@ firstnumberはこのプログラムリストの行番号を何から始めるか
 ![](https://i.imgur.com/SIVDOyt.png)
 
 ![](https://i.imgur.com/bUyA8K0.png)
+
 BibTeXを押す事でコードが表示されます．
 論文掲載サイトには大体BibTeXの項目があります．本の引用の仕方はarticle.bibに載っているものか調べて適宜参照してください．
