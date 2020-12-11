@@ -1,0 +1,80 @@
+\input soturon16.tex
+\bibliographystyle{junsrt}
+
+\begin{document}
+
+
+\Abstract{
+    ここでは簡単に本研究の説明を行います．
+}
+
+\SetFront
+
+%1
+\chapter{はじめに}
+%1.1
+\section{研究背景}
+\label{sec:1.1}
+これはLaTeXの雛形です．章の名前などは適宜変更，追加してください．
+
+%1.2
+\section{研究目的}
+\ref{sec:1.1}で述べたように節の名前も同様です．
+
+%2
+\chapter{画像の挿入}
+ここでは図の追加をします．
+図はpdfで追加します．
+\begin{figure}[hb]
+    \begin{center}  
+        \includegraphics[width=0.725\linewidth]{Figure/kanagawa.pdf}　%幅の倍率で設定すると調整しやすい．
+        \caption{神奈川工科大学\cite{kanakouPage}}
+        \label{fig:kanakou}
+    \end{center}
+\end{figure}
+
+
+%3
+\chapter{仕様する技術}
+\label{sec:3}
+表は表\ref{tab:Romazi}のように追加します．
+
+\begin{table}[htbp]
+    \centering
+    \caption{ローマ字表です}
+    \label{tab:Romazi}
+    \begin{tabular}{l|cc}
+      & a & k  \\ \hline
+    a & a & Ka \\
+    i & i & Ki \\
+    u & u & Ku
+    \end{tabular}
+\end{table}
+
+%4
+\chapter{システムの概要}
+\label{sec:4}
+%直接ソースコードを書く場合
+\begin{lstlisting}[caption=UUIDの変更関数,label=ChangeUUID, firstnumber=1]
+    #include<stdio.h>
+    void main(){
+        printf("TeXファイルに直接ソースコードを書く場合です．")
+    }
+\end{lstlisting}
+
+
+%5
+\chapter{むすび}
+LaTeXを使って簡単に卒論を書こう！！
+
+
+%参考文献
+\clearpage
+\addcontentsline{toc}{chapter}{参考文献}
+\bibliography{article}
+
+\Appendix
+\chapter{プログラムリスト}
+本プログラムを記す．
+\lstinputlisting[caption=SoturonTex,label=soturon]{Soturon.tex}
+\end{document}

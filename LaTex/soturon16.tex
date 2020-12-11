@@ -1,0 +1,78 @@
+\documentclass[a4j,11pt]{soturon}
+\usepackage{array}
+\usepackage[dvipdfmx]{graphicx}
+\usepackage{amssymb}
+\usepackage{fancyvrb}
+\usepackage{textcomp}
+\usepackage{comment}
+\usepackage{listings, jlisting}
+\usepackage{url}
+%\usepackage{times}
+\renewcommand{\sfdefault}{phv}
+\renewcommand{\rmdefault}{ptm}
+%\renewcommand{\ttdefault}{pcr}
+
+%\usepackage[super]{natbib}
+\newcommand{\Abstract}[1]{%
+\chapter*{\centering 論文要旨}
+%\hfill {\LARGE \bfseries 概要}\hfill{}
+#1}
+\newcommand{\FIG}[4]{%
+\begin{center}
+ \includegraphics[width=#1\textwidth]{#2.eps}\\
+\refstepcounter{figure}図\thefigure: #3\label{#4}
+\end{center}}
+\newcommand{\TABLE}[4]{%
+\begin{center}
+\refstepcounter{figure}表\thefigure: #2\label{#3}\\
+\begin{tabular}{#1}
+#4
+\end{tabular}
+\end{center}}
+\newcounter{LIST}[chapter]
+\renewcommand{\theLIST}{\thechapter.\arabic{LIST}}
+\newcommand{\LIST}[3]{%
+{\refstepcounter{LIST}\label{#1}\vspace{1ex}
+ \VerbatimInput[numbers=left, label={リスト\theLIST: #3\rule[-1.5ex]{0em}{1ex}},
+ frame=single, framerule=0mm,labelposition=topline]{#2}%
+ }}
+\renewcommand{\contentsname}{\centering 目次}
+\renewcommand{\bibname}{\centering 参考文献}
+%
+\setlength{\textwidth}{40zw}
+\setlength{\textheight}{40\baselineskip}
+\renewcommand{\labelenumi}{(\theenumi)}
+\renewcommand{\labelenumii}{(\theenumii)}
+\renewcommand{\labelenumiii}{(\theenumiii)}
+\newcommand{\Appendix}{\clearpage\appendix
+\renewcommand{\thechapter}{\arabic{chapter}}
+\renewcommand{\thepage}{付 \arabic{page}}
+\setcounter{page}{1}}
+\newcommand{\SetFront}{%
+   \thispagestyle{empty}\pagestyle{empty}
+\setcounter{page}{1}\tableofcontents
+\clearpage
+\pagestyle{myheadings}%\thispagestyle{empty}
+\setcounter{page}{1}}
+\markright{\hfill-- \thepage{} --}
+%\pagestyle{myheadings}
+\renewcommand{\theFancyVerbLine}{\normalsize\arabic{FancyVerbLine}}
+\lstset{
+  basicstyle={\ttfamily},
+  identifierstyle={\small},
+  commentstyle={\smallitshape},
+  keywordstyle={\small\bfseries},
+  ndkeywordstyle={\small},
+  stringstyle={\small\ttfamily},
+  frame={tb},
+  breaklines=true,
+  columns=[l]{fullflexible},
+  numbers=left,
+  xrightmargin=0zw,
+  xleftmargin=3zw,
+  numberstyle={\scriptsize},
+  stepnumber=1,
+  numbersep=1zw,
+  lineskip=-0.5ex
+}
+\renewcommand{\lstlistingname}{ソースコード}
