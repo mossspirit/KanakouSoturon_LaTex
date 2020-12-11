@@ -9,7 +9,7 @@ TeXを書くための環境として[TeXLive](https://texwiki.texjp.org/?TeX%20L
 ### **VSCodeのインストール**
 TeXLiveだけでも書けるのですが，VSCodeを用いた方が数倍楽なのでこの方法をお勧めします．
 まず初めに[VSCode](https://azure.microsoft.com/ja-jp/products/visual-studio-code/)をインストールします．
-インストール後にLaTex Workshopという拡張機能をいれます．
+インストール後にLaTe Workshopという拡張機能をいれます．
 
 ![](https://i.imgur.com/rmaJvSt.png)
 
